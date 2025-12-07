@@ -1,4 +1,38 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: rgb(227, 237, 255);
 }
+
+nav{
+    background-color: cornflowerblue;
+    padding: 17px;
+    display: flex;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    margin-left: 70px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover{
+    color: rgb(32, 65, 121);
+    letter-spacing: 1.5px;
+}
+
+#opcactual{
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+}
+
+#opcactual:hover{
+    border-bottom: 2px solid rgb(32, 65, 121);
+}
+
