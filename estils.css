@@ -4,6 +4,7 @@ body{
     background-color: rgb(227, 237, 255);
 }
 
+/* Navbar */
 nav{
     background-color: cornflowerblue;
     padding: 17px;
@@ -35,4 +36,74 @@ nav a:hover{
 #opcactual:hover{
     border-bottom: 2px solid rgb(32, 65, 121);
 }
+/* ------ */
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1,h2,h3{
+    color: rgb(32, 65, 121);
+}
+
+/* Formulario */
+.titulo_formulario{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.2);
+    padding: 30px 50px;
+    width: 77%;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+form{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.2);
+    padding: 40px 50px;
+    width: 77%;
+}
+
+.campo{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.cosa_campo{
+    background-color: white;
+    color: rgb(32, 65, 121);
+    font-size: 20px;
+    left: 15px;
+    padding: 0 4px;
+    pointer-events: none;
+    position: absolute;
+    top: 5px;
+}
+
+    /* Input */
+.campo input{
+    border: 2px solid rgb(145, 183, 255);
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 11px;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 30px);
+}
+
+.campo input:focus{
+    border-color: rgb(32, 65, 121);
+    outline: none;
+}
+
+.aviso{
+    display: none;  /* Por defecto ocultar aviso de error */
+    color: red;
+    font-size: 13px;
+}
+
+input:required:invalid:not(:focus):placeholder-shown + .aviso {   /* Mostrar aviso de error cuando esta vacío el campo */
+    display: block;
+}

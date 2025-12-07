@@ -12,5 +12,36 @@
             <a href="./index.html" id="opcactual">Formulario</a>
             <a href="./interaccio.html">Interactividad</a>
         </nav>
+        <main>
+            <div class="titulo_formulario">
+                <h1>Formulario para robarte la infomación xd</h1>
+                <h3>Por favor rellena con tus datos reales jeje</h3>
+            </div>
+            <!-- Formulario -->
+            <form action="destino" method="post">
+                <div class="campo">
+                    <label for="nombre_completo" class="cosa_campo">Nombre completo</label><br>
+                    <input 
+                    type="text" 
+                    id="nombre_completo" 
+                    name="nombre_completo" 
+                    placeholder="Ejemplo: Rui Kamishiro" 
+                    pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,40}$" 
+                    title="El nombre solo puede contener letras y espacios, entre 3 y 40 caracteres." 
+                    required>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <div class="campo">
+                    <label for="correo" class="cosa_campo">Correo electrónico</label><br>
+                    <input 
+                    type="email" 
+                    id="correo" 
+                    name="correo" 
+                    placeholder="Ejemplo: usuario@correo.com" 
+                    required>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+            </form>
+        </main>
     </body>
 </html>
