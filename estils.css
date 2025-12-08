@@ -4,6 +4,15 @@ body{
     background-color: rgb(227, 237, 255);
 }
 
+#fondo_azul{
+    background-image: url("./assets/img/fondoazul.jpg"); /* ruta a tu imagen */
+    background-size: cover;      /* La imagen cubre toda la pantalla */
+    background-position: center; /* Centrada */
+    background-repeat: no-repeat; /* No repetir */
+    background-attachment: fixed; /* La imagen queda fija al hacer scroll */
+    backdrop-filter: blur(10px); /* Difuminación */
+}
+
 /* Navbar */
 nav{
     background-color: cornflowerblue;
@@ -52,7 +61,7 @@ main h1,h2,h3{
 .titulo_formulario{
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 50px rgba(0,0,0,0.7);
     padding: 30px 50px;
     width: 77%;
     margin: 40px 0 20px;
@@ -62,11 +71,13 @@ main h1,h2,h3{
 form{
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 50px rgba(0,0,0,0.7);
     padding: 40px 50px;
     width: 77%;
+    margin-bottom: 20px;
 }
 
+    /* Campos */
 .campo{
     margin-bottom: 50px;
     position: relative;
@@ -83,8 +94,34 @@ form{
     top: 5px;
 }
 
-    /* Input */
-.campo input{
+.campo_color{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.cosa_campo_color{
+    background-color: white;
+    color: rgb(32, 65, 121);
+    font-size: 20px;
+    left: 15px;
+    padding: 0 4px;
+    pointer-events: none;
+    position: absolute;
+}
+
+.campo_eleccion{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.campo_eleccion label{
+    font-size: large;
+    margin: 10px;
+}
+    /* ------ */
+
+        /* Input */
+.campo input, select{
     border: 2px solid rgb(145, 183, 255);
     border-radius: 7px;
     font-size: 15px;
@@ -93,10 +130,39 @@ form{
     width: calc(100% - 30px);
 }
 
-.campo input:focus{
+.campo input:focus, select:focus{
     border-color: rgb(32, 65, 121);
     outline: none;
 }
+
+.campo textarea{
+    border: 2px solid rgb(145, 183, 255);
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 11px;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 50px);
+}
+
+.campo textarea:focus{
+    border-color: rgb(32, 65, 121);
+    outline: none;
+}
+
+.campo_color input{
+    border: 2px solid rgb(145, 183, 255);
+    border-radius: 7px;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 5px);
+    height: 70px;
+    background-color: white;
+}
+
+.campo_color input:focus{
+    border-color: rgb(32, 65, 121);
+    outline: none;
+}
+        /* ----- */
 
 .aviso{
     display: none;  /* Por defecto ocultar aviso de error */
@@ -106,4 +172,29 @@ form{
 
 input:required:invalid:not(:focus):placeholder-shown + .aviso {   /* Mostrar aviso de error cuando esta vacío el campo */
     display: block;
+}
+
+#botones{
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+#boton_submit, #boton_reset{
+    border: none;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 17px;
+    padding: 7px 17px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    margin-right: 20px;
+}
+
+#boton_submit:hover{
+    background-color: rgb(32, 65, 121);
+}
+
+#boton_reset:hover{
+    background-color: rgb(121, 32, 32);
 }

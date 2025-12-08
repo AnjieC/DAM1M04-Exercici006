@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="estils.css">
+        <link rel="icon" href="./assets/img/logoazul.png">
         <title>Formulario</title>
     </head>
-    <body>
+    <body id="fondo_azul">
         <!-- Navbar -->
         <nav>
             <a href="./index.html" id="opcactual">Formulario</a>
@@ -18,7 +19,8 @@
                 <h3>Por favor rellena con tus datos reales jeje</h3>
             </div>
             <!-- Formulario -->
-            <form action="destino" method="post">
+            <form action="#" method="post">
+                <!-- Nombre completo -->
                 <div class="campo">
                     <label for="nombre_completo" class="cosa_campo">Nombre completo</label><br>
                     <input 
@@ -31,15 +33,118 @@
                     required>
                     <span class="aviso">*Este campo es obligatorio.</span>
                 </div>
+                <!-- Correo -->
                 <div class="campo">
                     <label for="correo" class="cosa_campo">Correo electrónico</label><br>
                     <input 
                     type="email" 
                     id="correo" 
                     name="correo" 
-                    placeholder="Ejemplo: usuario@correo.com" 
+                    placeholder="Ejemplo: usuario@correo.com"
                     required>
                     <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <!-- Telefono -->
+                <div class="campo">
+                    <label for="telefono" class="cosa_campo">Teléfono</label><br>
+                    <input 
+                    type="tel" 
+                    id="telefono" 
+                    name="telefono" 
+                    placeholder="Ejemplo: 600123456" 
+                    pattern="^[0-9]{9}$" 
+                    title="Debe contener 9 números sin espacios ni símbolos">
+                </div>
+                <!-- Edad -->
+                <div class="campo">
+                    <label for="edad" class="cosa_campo">Edad</label><br>
+                    <input 
+                    type="number" 
+                    id="edad" 
+                    name="edad" 
+                    placeholder="Ejemplo: 19" 
+                    min="0" max="120" step="1" 
+                    required>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <!-- Fecha de nacimiento -->
+                <div class="campo">
+                    <label for="fecha_nacimiento" class="cosa_campo">Fecha de nacimiento</label><br>
+                    <input 
+                    type="date" 
+                    id="fecha_nacimiento" 
+                    name="fecha_nacimiento" 
+                    required>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <!-- Franja horaria -->
+                <div class="campo">
+                    <label for="hora" class="cosa_campo">Franja horaria</label><br>
+                    <input 
+                    type="time" 
+                    id="hora" 
+                    name="hora" 
+                    required>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <!-- Color favorito -->
+                <div class="campo_color">
+                    <label for="color" class="cosa_campo_color">Color favorito</label><br>
+                    <input 
+                    type="color" 
+                    id="color" 
+                    name="color">
+                </div>
+                <!-- Control deslizante -->
+                <div class="campo">
+                    <label for="satisfaccion" class="cosa_campo">Satisfacción con tu vida (0 - 10)</label><br>
+                    <input 
+                    type="range" 
+                    id="satisfaccion" 
+                    name="satisfaccion" 
+                    min="0" max="10" step="1"
+                    value="5">
+                </div>
+                <!-- Aficiones (checkbox múltiple) -->
+                <div class="campo_eleccion">
+                    <h2>Aficiones:</h2>
+                    <label><input type="checkbox" name="aficiones" value="videojuegos">🎮 Videojuegos</label>
+                    <label><input type="checkbox" name="aficiones" value="cinema">🎬 Cinema</label>
+                    <label><input type="checkbox" name="aficiones" value="lectura">📚 Lectura</label>
+                    <label><input type="checkbox" name="aficiones" value="musica">🎵 Música</label>
+                    <label><input type="checkbox" name="aficiones" value="deporte">⚽ Deporte</label>
+                </div>
+                <!-- Nivel de estudios (radio) -->
+                <div class="campo_eleccion">
+                    <h2>Nivel de estudios:</h2>
+                    <label><input type="radio" name="estudios" value="eso" required> ESO</label>
+                    <label><input type="radio" name="estudios" value="bachillerato"> Bachillerato</label>
+                    <label><input type="radio" name="estudios" value="fp"> Formación Profesional</label>
+                    <label><input type="radio" name="estudios" value="universidad"> Universidad</label>
+                </div>
+                <!-- País (select + option) -->
+                <div class="campo">
+                    <label for="pais" class="cosa_campo">País</label><br>
+                    <select id="pais" name="pais" required>
+                        <option value="" disabled selected hidden>-- Selecciona un país --</option>
+                        <option value="es">España</option>
+                        <option value="fr">Francia</option>
+                        <option value="it">Italia</option>
+                    </select>
+                    <span class="aviso">*Este campo es obligatorio.</span>
+                </div>
+                <!-- Comentarios -->
+                <div class="campo">
+                    <label for="comentarios" class="cosa_campo">Comentarios</label><br>
+                    <textarea 
+                    id="comentarios" 
+                    name="comentarios" 
+                    placeholder="Escribe tu comentario..." 
+                    rows="5" cols="40"></textarea>
+                </div>
+                <div id="botones">
+                    <button type="reset" id="boton_reset">Borrar datos</button>
+                    <button type="submit" id="boton_submit">Enviar</button>
                 </div>
             </form>
         </main>
