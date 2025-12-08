@@ -4,13 +4,59 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="estils.css">
+        <link rel="icon" href="./assets/img/logoazul.png">
         <title>Interactividad con CSS</title>
     </head>
-    <body>
+    <body id="pagina-interaccio">
         <!-- Navbar -->
         <nav>
             <a href="./index.html">Formulario</a>
             <a href="./interaccio.html" id="opcactual">Interactividad</a>
         </nav>
+        <div class="contenedor">
+            <h1>Info sobre nosotros</h1>
+            <!-- Pestañas CSS -->
+            <div class="tabs">
+                <!-- input type="radio", name="tab" -->
+                <input type="radio" name="tab" id="tab1" checked>
+                <input type="radio" name="tab" id="tab2">
+                <input type="radio" name="tab" id="tab3">
+                <!-- label botones -->
+                <div class="tab_botones">
+                    <label class="tab_boton tab_boton1" for="tab1">Formulario</label>
+                    <label class="tab_boton tab_boton2" for="tab2">Equipo</label>
+                    <label class="tab_boton tab_boton3" for="tab3">Contacto</label>
+                </div>
+                <!-- Contenido de los tab -->
+                <div class="tab-content content-1">
+                    <h2>Bienvenido/da!</h2>
+                    <p>Como ya habrás visto en la primera página, hay un formulario para nada sospechoso que puedes rellenar.</p>
+                    <p>Rellenalo y te llevarás una gran sorpresa, una sorpresa que puede cambiarte la vida jeje.</p>
+                    <div class="nota">
+                        <p><strong>Nota:</strong> todo esto es broma obviamente xd</p>
+                    </div>
+                </div>
+                <div class="tab-content content-2">
+                    <h2>El equipo detrás de esto:</h2>
+                    <p>Somos un equipo de profesionales apasionados por la tecnologia y el diseño we...</p>
+                    <p>O eso me gustaría decir, pero ni equipo ni profesionales, en realidad solo estoy yo xd</p>
+                    <p>Que quien soy? Que más da.</p>
+                    <div class="nota">
+                        <p><strong>PD:</strong> no sabía que hacer y terminé haciendo esto JAJAJA</p>
+                    </div>
+                </div>
+                <div class="tab-content content-3">
+                    <h2>Ponte en contacto conmigo</h2>
+                    <p>Dime que opinas de este proyecto.</p>
+                    <ul>
+                        <li>Email: pato.heujdwwhw@ave.com</li>
+                        <li>Teléfono: +34 987654321</li>
+                    </ul>
+                    <div class="nota">
+                        <p><strong>Nota:</strong> Datos falsos como los que has ingresado tu en mi formulario seguro :b</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

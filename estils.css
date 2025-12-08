@@ -53,7 +53,7 @@ main{
     align-items: center;
 }
 
-main h1,h2,h3{
+h1,h2,h3{
     color: rgb(32, 65, 121);
 }
 
@@ -198,3 +198,101 @@ input:required:invalid:not(:focus):placeholder-shown + .aviso {   /* Mostrar avi
 #boton_reset:hover{
     background-color: rgb(121, 32, 32);
 }
+/* ---------- */
+
+/* Pestañas CSS */
+.contenedor{
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.tabs input{   /* Ocultar */
+    display: none;
+}
+
+.tabs{  /* base del tab */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 7px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.tab_botones{   /* botones de tab */
+    display: flex;
+    background-color: rgb(238, 238, 238);
+    border-bottom: 1.5px solid rgb(194, 194, 194);
+}
+
+.tab_boton{
+    border-bottom: 3px solid transparent;
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s linear;
+    user-select: none;
+}
+
+.tab_boton:hover{
+    background-color: rgb(189, 207, 240);
+    color: cornflowerblue;
+}
+
+    /* Tab actual */
+body:has(#tab1:checked) .tab_botones .tab_boton1,
+body:has(#tab2:checked) .tab_botones .tab_boton2,
+body:has(#tab3:checked) .tab_botones .tab_boton3{
+    background: white;
+    border-bottom-color: cornflowerblue;
+    color: cornflowerblue;
+}
+    /* ---------- */
+    /* contenido de tab escondido */
+.tab-content{
+    display: none;
+    padding: 2.5rem;
+    animation: animacion_tab 0.4s ease-in;
+}
+    /* -------------------------- */
+
+@keyframes animacion_tab{
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+    /* Contenido de tab que se muestra */
+body:has(#tab1:checked) .content-1,
+body:has(#tab2:checked) .content-2,
+body:has(#tab3:checked) .content-3{
+    display: block;
+}
+    /* ------------------------------- */
+
+    /* decoración del contenido tab */
+.tab-content h2{
+    color: cornflowerblue;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.tab-content p{
+    color: rgb(75, 75, 75);
+    line-height: 1.7;
+}
+
+.tab-content ul{
+    color: rgb(75, 75, 75);
+    line-height: 2.5;
+    margin-left: 2.5rem;
+}
+
+.nota{
+    background: rgb(227, 237, 255);
+    border-left: 5px solid rgb(145, 183, 255);
+    border-radius: 9px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+    /* ---------------------------- */
+/* ------------ */
