@@ -37,7 +37,7 @@ nav a:hover{
     letter-spacing: 1.5px;
 }
 
-#opcactual{
+.opcactual{
     padding-bottom: 3px;
     border-bottom: 2px solid white;
 }
@@ -45,6 +45,60 @@ nav a:hover{
 #opcactual:hover{
     border-bottom: 2px solid rgb(32, 65, 121);
 }
+
+    /* Navbar para móvil */
+.navbar_movil{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav a{
+        display: none;
+    }
+
+    .navbar_movil{
+        display: block;
+    }
+
+    .navbar_movil a{
+        display: block;
+        padding-top: 20px;
+    }
+
+    #menu_toggle{
+        position: absolute;
+        opacity: 0;
+    }
+
+    .toggle{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+
+    .menu{
+        display: none;
+        font-size: 20px;
+        margin-left: -50px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    menu:hover{
+        letter-spacing: 1.5px;
+    }
+
+    /* Mostrar el menu al darle al icono de 3 rayas horizontales */
+    #pagina-interaccio:has(#menu_toggle:checked) .menu,
+    #fondo_azul:has(#menu_toggle:checked) .menu{
+        display: block;
+        animation: animacion_toggle 0.4s;
+    }
+
+    @keyframes animacion_toggle {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+    /* ----------------- */
 /* ------ */
 
 main{
