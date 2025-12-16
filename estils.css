@@ -172,6 +172,22 @@ form{
     font-size: large;
     margin: 10px;
 }
+
+@media (max-width: 768px) {
+    .titulo_formulario{
+        width: 70%;
+    }
+    
+    form{
+        width: 70%;
+    }
+    
+    .campo_eleccion{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
     /* ------ */
 
         /* Input */
@@ -256,8 +272,14 @@ input:required:invalid:not(:focus):placeholder-shown + .aviso {   /* Mostrar avi
 
 /* Pestañas CSS */
 .contenedor{
-    max-width: 80%;
+    width: 80%;
     margin: 50px auto;
+}
+
+@media (max-width: 768px) {
+    .contenedor{
+        width: 92%;
+    }
 }
 
 .tabs input{   /* Ocultar */
@@ -342,6 +364,12 @@ body:has(#tab3:checked) .content-3{
     margin-left: 2.5rem;
 }
 
+@media (max-width: 768px) {
+    .tab-content ul{
+        margin-left: 0rem;
+    }
+}
+
 .nota{
     background: rgb(227, 237, 255);
     border-left: 5px solid rgb(145, 183, 255);
@@ -387,9 +415,9 @@ body:has(#tab3:checked) .content-3{
 }
 
 /* Slide backgrounds */
-.slide:nth-child(1) { background-image: url("./assets/img/dia.jpg"); }
-.slide:nth-child(2) { background-image: url("./assets/img/tarde.jpg"); }
-.slide:nth-child(3) { background-image: url("./assets/img/noche.jpg"); }
+.slide:nth-child(1) { background-image: url("./assets/img/dia.jpg"); background-size: cover; }
+.slide:nth-child(2) { background-image: url("./assets/img/tarde.jpg"); background-size: cover; }
+.slide:nth-child(3) { background-image: url("./assets/img/noche.jpg"); background-size: cover; }
 
 
 /* Slide positioning based on checked radio */
